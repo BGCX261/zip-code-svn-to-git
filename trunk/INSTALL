@@ -1,0 +1,30 @@
+Installion of Route-Nova Zip-code Java library
+----------------------------------------------
+
+In order to install and run Zip-code distance calculations library, you must
+have following software:
+
+Java VM (tested on 1.5)
+PostgreSQL server (tested on 8.0)
+JDBC 3 PorstgreSQL driver (tested on postgresql-8.0-318.jdbc3.jar)
+
+Before use Zip-code library you should have census data table with zipcode,latitude,
+longitude data fields, if you don't have this database then follow instructions located at
+sql/PG_README file. If you have your own census data table then follow only 2 and 4
+steps form sql/PG_README file.
+
+NOTE: 0.1 release of Zip-code library have table name and field names limitation:
+
+1.) Your census data table should have name "zipcode".
+2.) Zip code field should be called "zipcode"
+3.) Latitude field should be called "lat".
+4.) Longitude field should be called "lon".
+
+If your table or field names diffrent from listed above please chenge their names.
+
+After your database data prepared you should only copy zipcode-x.x.x.jar library to
+your CLASSPATH or add it to your project class path.
+
+At folder 'samples' you can find some examples how to use Route-Nova Zip-code library
+at your own projects.
+

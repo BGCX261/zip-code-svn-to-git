@@ -1,0 +1,44 @@
+All SQL data related to PostgreSQL stored under postgresql folder.
+Before use Route-Nova zipcode geo calculation library you should do
+following steps:
+
+1. Create your testing database
+2. Install to Pl/PgSQL language to your database.
+3. Create your testing scheme and zipcode table.
+4. Create zipcode calculation stored functions.
+5. Import zipcodes data (here we use open source US zip code database).
+
+Ok lets go!!
+
+1. Create test database (for example we working under user postgres and new
+   database name "ziptest"):
+
+   $ createdb -U postgres -T template0 ziptest
+
+2. Install Pl/PgSQL language into new database:
+
+   $ createlang -U postgres plpgsql ziptest
+
+3. Create zipcode table:
+   Open in your favorite text editor file 01_table.sql.
+   Then change string %YOURSCHEME% to your database schema name.
+
+   $ psql -U postgres ziptest < 01_table.sql
+
+4. Create zipcode stored functions:
+   Open in your favorite text editor file 02_functions.sql.
+   Then change string %YOURSCHEME% to your database schema name.
+
+   $ psql -U postgres ziptest < 02_functions.sql
+
+5. Import zip codes table:
+   Open in your favorite text editor file 03_zipcodedata.sql.
+   Then change string %YOURSCHEME% to your database schema name.
+
+   $ psql -U postgres ziptest < 03_zipcodedata.sql
+
+
+Now you have database "ziptest" with data filled table "zipcode" at your scheme.
+After this steps you ready to use Route-Nova zip-code geo calculation library.
+
+

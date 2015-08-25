@@ -1,0 +1,56 @@
+About Route-Nova Zip-code
+-----------
+Zip-code is a library for calculating the distance between two zip
+codes and finding all the records with x miles (or kilometres) of another zip code.
+Currently, Zip-code support only PostgreSQL. Additional future support for other
+databases will be added in future releases of Zip-code.
+
+Zip-code is free software released under the terms of the new BSD license.
+Zip-code was written in JAVA and Pg/PlSQL. It runs for testing purposes with
+open-source US zip code data, that aviliable for free at http://www.populardata.com
+in CSV format. 
+
+The distance calculations are made by doing a great circle calculation on 
+longitude and latitude points provided by the census data.
+The result is returned in kilometres or standard miles.
+
+Full information about the installation of Zip-code can be found in the INSTALL
+file in this directory.
+
+More information about Route-Nova Zip-code library you can see at our web sites:
+
+http://www.routenova.org/Zip_code  - Page at Route-Nova Project.
+http://code.google.com/p/zip-code  - Code hosting and Issues tracking.
+http://groups.google.com/group/routenova-zipcode/ - Support forum
+
+
+Files
+-----
+zipcode-x.x.x	Zip-code Distribution Archive
+    zipcode-x.x.x.jar    Zipcode library
+	AUTHORS		Contributors to the Zip-code project
+    BUGS		Known Bugs and problems with Zip-code
+    COPYING		new BSD license
+    INSTALL		Instructions on how to install Zip-code
+    README		This file
+    TODO		Work to be done on Zip-code
+
+    api/		JavaDoc auto generated api documentation
+
+	src/	    Source code
+		org/
+		    routenova/
+		              zipcode/
+		                      Zipcode.java    Zipcode main Java class.
+    tests/       Junit 4 tests
+          routenova/
+                    zipcode/
+                            AllTests.java    Junit test suite.
+                            ZipcodeTest.java Junit Zipcode class test.
+    sql/        SQL data
+        PG_README    PostgreSQL installation README.
+        postgresql/    PostgreSQL related data
+                   01_table.sql    Zipcode table and scheme creation script.
+                   02_functions.sql   Stored functions creation script.
+                   03_zipcodedata.sql Zipcode table data (US census).
+    samples/

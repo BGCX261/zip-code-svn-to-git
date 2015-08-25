@@ -1,0 +1,7 @@
+Examples will be provided in future releases of Zip-code.
+
+Now usage example you can see in our Unit tests at:
+
+/tests/tests/org/routenova/utils/zipcode/ZipcodeTest.java file.
+
+For API documentation look at "api" folder or source *.java files.
